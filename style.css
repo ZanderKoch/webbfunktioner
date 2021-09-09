@@ -1,0 +1,36 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+div.transparent70{
+    opacity: 0.7;
+}
+
+.is-fullheight-100vh{
+    height:100vh;
+  }
+
+/*I don't know if there's a better way to customise bulma 
+  so i'm doing it this way*/
+div.main{
+    background-image: url("bg.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+section.hero{
+    z-index: 1;
+}
+
+p{
+    opacity: 1.0;
+    margin-bottom: 1em;
+}
+
+iframe{
+    opacity: 1.0;
+}
