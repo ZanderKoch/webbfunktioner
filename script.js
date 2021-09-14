@@ -21,20 +21,30 @@ function init(){
     //third form
 }
 
-
+//gets a number from an element's .value
 function getNum(element) {
-    
+    if (Number.isInteger(element.value)){
+        return element.value;
+    }
+    else{
+        return null;
+    }
 }
 
 function displaySum(){
     let sum;
-    let minNum = min.
+    let minNum = getNum(min);
+    let maxNum = getNum(max);
 
-
-    for(let i = min.value; i < max.value; i++){
-        sum += i;
+    if(minNum != null || maxNum != null || minNum < maxNum){
+        for(let i = minNum; i < maxNum; i++){
+            sum += i;
+        }
     }
-
+    else{
+        alert("make sure that you have entered two whole numbers and that max is larger")
+    }
+    console.log("sum: " + sum)
     sumResult.innerHTML = sum;
 }
 
